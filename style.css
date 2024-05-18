@@ -40,6 +40,8 @@ header {
     align-items: center;
     justify-content: flex-end;
 
+    overflow-x:auto;
+
     height: 75px;
     width: 100%;
     padding: 0 5%;
