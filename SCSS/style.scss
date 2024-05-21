@@ -1,0 +1,132 @@
+@import "_reset";
+@import "_vars";
+/*импорт шрифтов*/
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Italiana&family=Julius+Sans+One&display=swap');
+
+/*настройка*/
+* {
+    font-family: "Julius Sans One";
+}
+
+body {
+    min-height: 100vh;
+    min-width: 400px;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+  }
+
+@media (max-width: 800px) {
+    html {
+       font-size: 12px;
+     }
+  }
+
+/*header*/
+.top-header {
+    background-color: white;
+    height: 50px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    z-index: 10;
+    height: 75px;
+    width: 100%;
+    padding: 0 5%;
+    position: sticky;
+    top: 0;
+    background-color: white;
+
+    & .logo{
+        color:black;
+        font-size: 2.25rem;
+        text-transform: uppercase;
+        margin-right: auto;
+        font-weight: 600;
+        border-top: solid 0.15rem black;
+    }
+    
+    & nav{
+        display: flex;
+        align-items: center;
+
+        & .menu{
+            display: flex;
+            align-items: center;
+
+            & li a{
+                margin-left: 32px;
+                font-size: 1.75rem;
+                transition: 0.3s color ease, 0.5s font-size ease;
+                color: black;
+
+                &:hover {
+                    font-size: 2rem;
+                    color: rgb(180, 180, 180);
+                }
+
+                &:active{
+                    transition-duration: 0s;
+                    color: rgb(255, 181, 21);
+                }
+            }
+        }
+    }
+}
+
+/*home page*/
+
+main {
+    height: 4000px;
+}
+
+.home {
+    background-image: url(../img/mainbackground.jpg);
+    background-color: $color-secondary;
+    background-size: cover;
+    background-position: center;
+
+    & .title-container {
+        color: #ECE7E7;
+        background-color: rgba(176, 150, 150, 0.6);
+        max-width: 470px;
+        margin-left: 10%;
+    }
+
+    & h1, p {
+        padding-left: 30px;
+        padding-right: 5px;
+        font-weight: 400;
+        font-family: 'Italiana';
+    }
+
+    & h1 {
+        padding-top: 80px;
+        padding-bottom: 120px;
+        font-size: 5rem;
+    }
+
+    & p {
+        padding-bottom: 200px;
+        font-size: 3rem;
+    }
+ 
+}
+
+.opening-hours {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    padding: 25px 0;
+    font-size: 1.25rem;
+}
+
+/* about page */
+

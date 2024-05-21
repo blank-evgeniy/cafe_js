@@ -1,0 +1,145 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Italiana&family=Julius+Sans+One&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+/*импорт шрифтов*/
+/*настройка*/
+* {
+  font-family: "Julius Sans One";
+}
+
+body {
+  min-height: 100vh;
+  min-width: 400px;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 800px) {
+  html {
+    font-size: 12px;
+  }
+}
+/*header*/
+.top-header {
+  background-color: white;
+  height: 50px;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  position: relative;
+  z-index: 10;
+  height: 75px;
+  width: 100%;
+  padding: 0 5%;
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
+header .logo {
+  color: black;
+  font-size: 2.25rem;
+  text-transform: uppercase;
+  margin-right: auto;
+  font-weight: 600;
+  border-top: solid 0.15rem black;
+}
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header nav .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header nav .menu li a {
+  margin-left: 32px;
+  font-size: 1.75rem;
+  -webkit-transition: 0.3s color ease, 0.5s font-size ease;
+  transition: 0.3s color ease, 0.5s font-size ease;
+  color: black;
+}
+header nav .menu li a:hover {
+  font-size: 2rem;
+  color: rgb(180, 180, 180);
+}
+header nav .menu li a:active {
+  -webkit-transition-duration: 0s;
+          transition-duration: 0s;
+  color: rgb(255, 181, 21);
+}
+
+/*home page*/
+main {
+  height: 4000px;
+}
+
+.home {
+  background-image: url(../img/mainbackground.jpg);
+  background-color: #7E655D;
+  background-size: cover;
+  background-position: center;
+}
+.home .title-container {
+  color: #ECE7E7;
+  background-color: rgba(176, 150, 150, 0.6);
+  max-width: 470px;
+  margin-left: 10%;
+}
+.home h1, .home p {
+  padding-left: 30px;
+  padding-right: 5px;
+  font-weight: 400;
+  font-family: "Italiana";
+}
+.home h1 {
+  padding-top: 80px;
+  padding-bottom: 120px;
+  font-size: 5rem;
+}
+.home p {
+  padding-bottom: 200px;
+  font-size: 3rem;
+}
+
+.opening-hours {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 25px 0;
+  font-size: 1.25rem;
+}
+
+/* about page */
