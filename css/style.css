@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Italiana&family=Julius+Sans+One&display=swap");
 * {
@@ -8,16 +7,11 @@
           box-sizing: border-box;
   list-style: none;
   text-decoration: none;
-}
-
-/*импорт шрифтов*/
-/*настройка*/
-* {
   font-family: "Julius Sans One";
 }
 
-body {
-  min-height: 100vh;
+.page {
+  min-height: 300vh;
   min-width: 400px;
 }
 
@@ -31,13 +25,18 @@ html {
     font-size: 12px;
   }
 }
-/*header*/
-.top-header {
+.page__top-line {
   background-color: white;
   height: 50px;
 }
+.page__header {
+  position: sticky;
+  top: 0;
+  padding: 0 5%;
+  z-index: 10;
+}
 
-header {
+.header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -47,16 +46,11 @@ header {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  position: relative;
-  z-index: 10;
   height: 75px;
   width: 100%;
-  padding: 0 5%;
-  position: sticky;
-  top: 0;
   background-color: white;
 }
-header .logo {
+.header__logo {
   color: black;
   font-size: 2.25rem;
   text-transform: uppercase;
@@ -64,7 +58,7 @@ header .logo {
   font-weight: 600;
   border-top: solid 0.15rem black;
 }
-header nav {
+.header__nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -72,7 +66,8 @@ header nav {
       -ms-flex-align: center;
           align-items: center;
 }
-header nav .menu {
+
+.menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -80,26 +75,30 @@ header nav .menu {
       -ms-flex-align: center;
           align-items: center;
 }
-header nav .menu li a {
+.menu__item {
   margin-left: 32px;
+}
+.menu__link {
   font-size: 1.75rem;
   -webkit-transition: 0.3s color ease, 0.5s font-size ease;
   transition: 0.3s color ease, 0.5s font-size ease;
   color: black;
 }
-header nav .menu li a:hover {
+.menu__link:hover {
   font-size: 2rem;
   color: rgb(180, 180, 180);
 }
-header nav .menu li a:active {
+.menu__link:active {
   -webkit-transition-duration: 0s;
           transition-duration: 0s;
   color: rgb(255, 181, 21);
 }
 
-/*home page*/
-main {
-  height: 4000px;
+.main__opening-hours {
+  padding: 25px 0;
+}
+.main__about {
+  padding-top: 180px;
 }
 
 .home {
@@ -108,38 +107,97 @@ main {
   background-size: cover;
   background-position: center;
 }
-.home .title-container {
-  color: #ECE7E7;
-  background-color: rgba(176, 150, 150, 0.6);
+.home__title-container {
   max-width: 470px;
   margin-left: 10%;
-}
-.home h1, .home p {
   padding-left: 30px;
   padding-right: 5px;
-  font-weight: 400;
-  font-family: "Italiana";
+  color: #ECE7E7;
+  background-color: rgba(176, 150, 150, 0.6);
 }
-.home h1 {
+.home__title {
+  font: 5rem "Italiana";
   padding-top: 80px;
   padding-bottom: 120px;
-  font-size: 5rem;
 }
-.home p {
+.home__subtitle {
+  font: 3rem "Italiana";
   padding-bottom: 200px;
-  font-size: 3rem;
 }
 
 .opening-hours {
-  background-color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 25px 0;
   font-size: 1.25rem;
+  background-color: white;
 }
 
-/* about page */
+.about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+.about__image {
+  width: 100%;
+  height: 700px;
+  background-image: url(../img/about.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-right: 2.5rem solid #2E2C2C;
+}
+.about__image-wrapper {
+  padding-top: 150px;
+}
+.about__column {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.about__title {
+  font: 4rem "Italiana";
+  padding-bottom: 85px;
+  padding-left: 10%;
+  padding-right: 20%;
+}
+.about__description {
+  font-size: 2rem;
+  padding-left: 10%;
+  padding-right: 30%;
+  padding-bottom: 200px;
+}
+.about::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-image: url("../img/about_decor.svg");
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 1000px) {
+  .about {
+    display: block;
+  }
+  .about__image {
+    height: 50vh;
+  }
+  .about__image-wrapper {
+    padding-top: 0px;
+  }
+  .about__title {
+    padding-top: 20px;
+  }
+  .about__description {
+    padding-bottom: 100px;
+  }
+  .about::after {
+    height: 100px;
+  }
+}

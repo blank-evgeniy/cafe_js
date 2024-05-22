@@ -1,50 +1,30 @@
-@import "_reset";
-@import "_vars";
-/*импорт шрифтов*/
-@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Italiana&family=Julius+Sans+One&display=swap');
+@use "_reset";
+@use "_vars";
+@use "_fonts";
 
-/*настройка*/
-* {
-    font-family: "Julius Sans One";
+.page {
+    &__top-line{
+        background-color: white;
+        height: 50px;
+    }
+    &__header{
+        position: sticky;
+        top: 0;
+        padding: 0 5%;
+        z-index: 10;
+    }
 }
 
-body {
-    min-height: 100vh;
-    min-width: 400px;
-}
-
-html {
-    font-size: 16px;
-    scroll-behavior: smooth;
-  }
-
-@media (max-width: 800px) {
-    html {
-       font-size: 12px;
-     }
-  }
-
-/*header*/
-.top-header {
-    background-color: white;
-    height: 50px;
-}
-
-header {
+//-------------------header------------------------
+.header {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    position: relative;
-    z-index: 10;
     height: 75px;
     width: 100%;
-    padding: 0 5%;
-    position: sticky;
-    top: 0;
     background-color: white;
 
-    & .logo{
+    &__logo {
         color:black;
         font-size: 2.25rem;
         text-transform: uppercase;
@@ -52,81 +32,140 @@ header {
         font-weight: 600;
         border-top: solid 0.15rem black;
     }
-    
-    & nav{
+    &__nav {
         display: flex;
         align-items: center;
+    }
+}
 
-        & .menu{
-            display: flex;
-            align-items: center;
+.menu {
+    display: flex;
+    align-items: center;
 
-            & li a{
-                margin-left: 32px;
-                font-size: 1.75rem;
-                transition: 0.3s color ease, 0.5s font-size ease;
-                color: black;
-
-                &:hover {
-                    font-size: 2rem;
-                    color: rgb(180, 180, 180);
-                }
-
-                &:active{
-                    transition-duration: 0s;
-                    color: rgb(255, 181, 21);
-                }
-            }
+    &__item {
+        margin-left: 32px;
+    }
+    &__link {
+        font-size: 1.75rem;
+        transition: 0.3s color ease, 0.5s font-size ease;
+        color: black;
+        &:hover {
+            font-size: 2rem;
+            color: rgb(180, 180, 180);
+        }
+        &:active{
+            transition-duration: 0s;
+            color: rgb(255, 181, 21);
         }
     }
 }
 
-/*home page*/
-
-main {
-    height: 4000px;
+.main {
+    &__opening-hours {
+        padding: 25px 0;
+    }
+    &__about {
+        padding-top: 180px;
+    }
 }
 
+//-------------------home------------------------
 .home {
     background-image: url(../img/mainbackground.jpg);
-    background-color: $color-secondary;
+    background-color: vars.$color-secondary;
     background-size: cover;
     background-position: center;
 
-    & .title-container {
-        color: #ECE7E7;
-        background-color: rgba(176, 150, 150, 0.6);
+    &__title-container {
         max-width: 470px;
         margin-left: 10%;
-    }
-
-    & h1, p {
         padding-left: 30px;
         padding-right: 5px;
-        font-weight: 400;
-        font-family: 'Italiana';
-    }
-
-    & h1 {
+        color: #ECE7E7;
+        background-color: rgba(176, 150, 150, 0.6);
+    }    
+    &__title {
+        font: 5rem 'Italiana';
         padding-top: 80px;
         padding-bottom: 120px;
-        font-size: 5rem;
     }
-
-    & p {
+    &__subtitle {
+        font: 3rem 'Italiana';
         padding-bottom: 200px;
-        font-size: 3rem;
     }
- 
 }
 
 .opening-hours {
-    background-color: white;
     display: flex;
     justify-content: center;
-    padding: 25px 0;
     font-size: 1.25rem;
+    background-color: white;
 }
 
-/* about page */
+//-------------------about------------------------
+.about{
+    display: flex;
+    position: relative;
+
+    &__image{
+        width: 100%;
+        height: 700px;
+        background-image: url(../img/about.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-right: 2.5rem solid vars.$color-primary;
+    }
+    &__image-wrapper{
+        padding-top: 150px;
+    }
+    &__column{
+        flex: 1;
+    }
+    &__title{
+        font: 4rem 'Italiana';
+        padding-bottom: 85px;
+        padding-left: 10%;
+        padding-right: 20%;
+    }
+    &__description{
+        font-size: 2rem;
+        padding-left: 10%;
+        padding-right: 30%;
+        padding-bottom: 200px;
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 200px;
+        background-size: cover;
+        background-image: url('../img/about_decor.svg');
+        background-repeat: no-repeat;
+    }
+}
+
+@media (max-width: 1000px) {
+    .about{
+        display: block;
+        &__image{
+            height: 50vh;
+        }
+        &__image-wrapper{
+            padding-top: 0px;
+        }
+        &__title{
+            padding-top: 20px;
+        }
+        &__description{
+            padding-bottom: 100px;
+        }
+        &::after{
+            height: 100px;
+        }
+    }
+  }
+
+//-------------------menu------------------------
+
 
