@@ -131,16 +131,15 @@
         font-size: 2rem;
         padding-left: 10%;
         padding-right: 30%;
-        padding-bottom: 200px;
+        padding-bottom: 170px;
     }
     &::after{
         content: '';
         position: absolute;
         bottom: 0;
         width: 100%;
-        height: 200px;
-        background-size: cover;
-        background-image: url('../img/about_decor.svg');
+        height: 160px;
+        background-image: url('../img/about_dec.svg');
         background-repeat: no-repeat;
     }
 }
@@ -158,7 +157,7 @@
             padding-top: 20px;
         }
         &__description{
-            padding-bottom: 100px;
+            padding-bottom: 110px;
         }
         &::after{
             height: 100px;
@@ -166,6 +165,56 @@
     }
   }
 
-//-------------------menu------------------------
+//-------------------cafe-menu------------------------
+.cafe-menu {
+    &__title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 156px;
+        font: 6rem 'Italiana';
+        color: white;
+        background-color: #D2C3C3;
+    }
+    &__row {
+        display: flex;
+        justify-content: center;
+        padding-top: 48px;
+    }
+    &__column{
+        flex: 1 600px;
+        max-width: 600px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    &__column_first{
+        border-right: 2px solid #C2C2C2;
+    }
+}
 
+.menu_section{
+    &__title{
+        font-size: 2rem;
+        padding-bottom: 2rem;
+        padding-top: 0.5rem;
+    }
+    &__item{
+        font-size: 1.25rem;
+        padding-bottom: 1rem;
+    }
+    &__desription{
+        color: #818181;
+    }
+}
+
+@media (max-width: 800px) {
+    .cafe-menu{
+        &__row{
+            flex-wrap: wrap;
+        }
+        &__column{
+            border: none;
+        }
+    }
+  }
 
