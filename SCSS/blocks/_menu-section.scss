@@ -1,0 +1,14 @@
+.menu-section{
+    &__title{
+        font-size: 2rem;
+        padding-bottom: 2rem;
+        padding-top: 0.5rem;
+    }
+    &__item{
+        font-size: 1.25rem;
+        padding-bottom: 1rem;
+    }
+    &__desription{
+        color: #818181;
+    }
+}

@@ -1,0 +1,31 @@
+.home {
+    background-image: url(../img/mainbackground.jpg);
+    background-color: $color-secondary;
+    background-size: cover;
+    background-position: center;
+
+    &__title-container {
+        max-width: 470px;
+        margin-left: 10%;
+        padding-left: 30px;
+        padding-right: 5px;
+        color: #ECE7E7;
+        background-color: rgba(176, 150, 150, 0.6);
+    }    
+    &__title {
+        font: 5rem $font-accent;
+        padding-top: 80px;
+        padding-bottom: 120px;
+    }
+    &__subtitle {
+        font: 3rem $font-accent;
+        padding-bottom: 200px;
+    }
+    &__opening-hours{
+        padding: 25px 0;
+        display: flex;
+        justify-content: center;
+        font-size: 1.25rem;
+        background-color: white;
+    }
+}

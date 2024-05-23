@@ -1,0 +1,36 @@
+.cafe-menu {
+    &__title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 156px;
+        font: 6rem 'Italiana';
+        color: white;
+        background-color: #D2C3C3;
+    }
+    &__row {
+        display: flex;
+        justify-content: center;
+        padding-top: 48px;
+    }
+    &__column{
+        max-width: 600px;
+        padding-left: 50px;
+        padding-right: 50px;
+        &_first{
+            border-right: 2px solid #C2C2C2;
+        }
+    }
+}
+
+@include mediaTablet {
+    .cafe-menu{
+        &__row{
+            flex-direction: column;
+            align-items: center;
+        }
+        &__column{
+            border: none;
+        }
+    }
+  }

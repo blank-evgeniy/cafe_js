@@ -6,17 +6,17 @@
     <title>Cafe</title>
     <link href="css/style.css" rel="stylesheet">
 </head>
-<body class="page">
-    <div class="page__top-line"></div>
-    <header class="header page__header">
+<body>
+    <div class="header-top"></div>
+    <header class="header">
         <div class="header__logo">ame</div>
-        <nav class="header__nav">
-            <ul class="menu">
-                <li class="menu__item"><a class="menu__link" href="#home">home</a></li>
-                <li class="menu__item"><a class="menu__link" href="#about">about</a></li>
-                <li class="menu__item"><a class="menu__link" href="#">menu</a></li>
-                <li class="menu__item"><a class="menu__link" href="#">delivery</a></li>
-                <li class="menu__item"><a class="menu__link" href="#">contact</a></li>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a class="nav__link" href="#home">home</a></li>
+                <li class="nav__item"><a class="nav__link" href="#about">about</a></li>
+                <li class="nav__item"><a class="nav__link" href="#menu">menu</a></li>
+                <li class="nav__item"><a class="nav__link" href="#">delivery</a></li>
+                <li class="nav__item"><a class="nav__link" href="#">contact</a></li>
             </ul>
         <nav>
     </header>
@@ -27,10 +27,10 @@
                 <h1 class="home__title">Welcome to our café</h1>
                 <div class="home__subtitle">New café in London United Kingdom</div>
             </div>
+            <div class="home__opening-hours">
+                <pre>opens  M - F: 8AM TO 5PM  Sa - Su: 9AM TO 4PM</pre>
+            </div>
         </section>
-        <div class="opening-hours main__opening-hours">
-            <pre>opens  M - F: 8AM TO 5PM  Sa - Su: 9AM TO 4PM</pre>
-        </div>
 
         <section class="about main__about" id="about">
             <div class="about__column">
@@ -47,79 +47,100 @@
             </div>
         </section>
         
-        <section class="cafe-menu main__cafe-menu">
+        <section class="cafe-menu main__cafe-menu" id="menu">
             <h2 class="cafe-menu__title">menu</h2>
             <div class="cafe-menu__row">
                 <div class="cafe-menu__column cafe-menu__column_first">
-                    <div class="menu_section">
-                        <div class="menu_section__title">Breakfasts</div>
-                        <div class="menu_section__item">
-                            <div class="menu_section__dish">Pancake Stack €11.00</div>
-                            <div class="menu_section__desription">with Bacon and Maple Syrup</div>
+                    <div class="menu-section">
+                        <div class="menu-section__title">Breakfasts</div>
+                        <div class="menu-section__item">
+                            <div class="menu-section__dish">Pancake Stack €11.00</div>
+                            <div class="menu-section__desription">with Bacon and Maple Syrup</div>
                         </div>
-                        <div class="menu_section__item">
-                            <div class="menu_section__dish">Pancake Stack €11.00</div>
-                            <div class="menu_section__desription">with Strawberries/Fruit & Cream</div>
+                        <div class="menu-section__item">
+                            <div class="menu-section__dish">Pancake Stack €11.00</div>
+                            <div class="menu-section__desription">with Strawberries/Fruit & Cream</div>
                         </div>
-                        <div class="menu_section__item">
-                            <div class="menu_section__dish">Porridge Overnight Oats €7.00</div>
-                            <div class="menu_section__desription">with Oat Milk, Granola, & Fruit Compote</div>
+                        <div class="menu-section__item">
+                            <div class="menu-section__dish">Porridge Overnight Oats €7.00</div>
+                            <div class="menu-section__desription">with Oat Milk, Granola, & Fruit Compote</div>
                         </div>
-                        <div class="menu_section__item">
-                            <div class="menu_section__dish">Waterford Blaa €8.50</div>
-                            <div class="menu_section__desription">with TJ Crow Bacon and Sausage</div>
+                        <div class="menu-section__item">
+                            <div class="menu-section__dish">Waterford Blaa €8.50</div>
+                            <div class="menu-section__desription">with TJ Crow Bacon and Sausage</div>
                         </div>
                     </div>
-                    <div class="menu_section">
-                        <div class="menu_section__title">Sandwiches</div>
-                        <div class="menu_section__item">
-                            <div class="menu_section__dish">Reuben on Sourdough €9.80</div>
+                    <div class="menu-section">
+                        <div class="menu-section__title">Sandwiches</div>
+                        <div class="menu-section__item">
+                            <div class="menu-section__dish">Reuben on Sourdough €9.80</div>
                         </div>
-                        <div class="menu_section__item">
-                            <div class="menu_section__dish">Guinness Brown Bread Smoked Salmon €9.00 </div>
+                        <div class="menu-section__item">
+                            <div class="menu-section__dish">Guinness Brown Bread Smoked Salmon €9.00 </div>
                         </div>
-                        <div class="menu_section__item">
-                            <div class="menu_section__dish">Guinness Brown Bread Prawns €10.00 </div>
+                        <div class="menu-section__item">
+                            <div class="menu-section__dish">Guinness Brown Bread Prawns €10.00 </div>
                         </div>
-                        <div class="menu_section__item">
-                            <div class="menu_section__dish">Ciabatta Prosciutto €9.80</div>
+                        <div class="menu-section__item">
+                            <div class="menu-section__dish">Ciabatta Prosciutto €9.80</div>
                         </div>
                     </div>
                 </div>
                 <div class="cafe-menu__column">
-                    <div class="menu_section">
-                        <div class="menu_section__title">Breakfasts</div>
-                        <div class="menu_section__item">
-                            <div class="menu_section__dish">Pancake Stack €11.00</div>
-                            <div class="menu_section__desription">with Bacon and Maple Syrup</div>
+                    <div class="menu-section">
+                        <div class="menu-section__title">Breakfasts</div>
+                        <div class="menu-section__item">
+                            <div class="menu-section__dish">Pancake Stack €11.00</div>
+                            <div class="menu-section__desription">with Bacon and Maple Syrup</div>
                         </div>
-                        <div class="menu_section__item">
-                            <div class="menu_section__dish">Pancake Stack €11.00</div>
-                            <div class="menu_section__desription">with Strawberries/Fruit & Cream</div>
+                        <div class="menu-section__item">
+                            <div class="menu-section__dish">Pancake Stack €11.00</div>
+                            <div class="menu-section__desription">with Strawberries/Fruit & Cream</div>
                         </div>
-                        <div class="menu_section__item">
-                            <div class="menu_section__dish">Porridge Overnight Oats €7.00</div>
-                            <div class="menu_section__desription">with Oat Milk, Granola, & Fruit Compote</div>
+                        <div class="menu-section__item">
+                            <div class="menu-section__dish">Porridge Overnight Oats €7.00</div>
+                            <div class="menu-section__desription">with Oat Milk, Granola, & Fruit Compote</div>
                         </div>
-                        <div class="menu_section__item">
-                            <div class="menu_section__dish">Waterford Blaa €8.50</div>
-                            <div class="menu_section__desription">with TJ Crow Bacon and Sausage</div>
+                        <div class="menu-section__item">
+                            <div class="menu-section__dish">Waterford Blaa €8.50</div>
+                            <div class="menu-section__desription">with TJ Crow Bacon and Sausage</div>
                         </div>
                     </div>
-                    <div class="menu_section">
-                        <div class="menu_section__title">Sandwiches</div>
-                        <div class="menu_section__item">
-                            <div class="menu_section__dish">Reuben on Sourdough €9.80</div>
+                    <div class="menu-section">
+                        <div class="menu-section__title">Sandwiches</div>
+                        <div class="menu-section__item">
+                            <div class="menu-section__dish">Reuben on Sourdough €9.80</div>
                         </div>
-                        <div class="menu_section__item">
-                            <div class="menu_section__dish">Guinness Brown Bread Smoked Salmon €9.00 </div>
+                        <div class="menu-section__item">
+                            <div class="menu-section__dish">Guinness Brown Bread Smoked Salmon €9.00 </div>
                         </div>
-                        <div class="menu_section__item">
-                            <div class="menu_section__dish">Guinness Brown Bread Prawns €10.00 </div>
+                        <div class="menu-section__item">
+                            <div class="menu-section__dish">Guinness Brown Bread Prawns €10.00 </div>
                         </div>
-                        <div class="menu_section__item">
-                            <div class="menu_section__dish">Ciabatta Prosciutto €9.80</div>
+                        <div class="menu-section__item">
+                            <div class="menu-section__dish">Ciabatta Prosciutto €9.80</div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="recipe">
+            <div class="recipe__wrapper">
+                <h2 class="recipe__title">Receipe of the day</h2>
+                <div class="recipe__row">
+                    <div class="recipe-item">
+                        <div class="recipe-item__title">Honey Garlic Glazed Salmon</div>
+                        <div class="recipe-item__description">A perfect sweet and savoury 5-ingredient garlicky sauce 
+                            with ahint of lemon will become your family's
+                            new salmon obsession</div>
+                        <img src="img/recipe1.png" alt="Honey Garlic Glazed Salmon" class="recipe-item__image">
+                    </div>
+                    <div class="recipe-item">
+                        <div class="recipe-item__title">Filet Mignon</div>
+                        <div class="recipe-item__description">10oz american beef tenderloin hand-cut and trimmed served 
+                            with potato Anna, mushroom demi glazesautéed asaparagus, baby carrots</div>
+                        <img src="img/recipe2.png" alt="Filet Mignon" class="recipe-item__image">
                     </div>
                 </div>
             </div>

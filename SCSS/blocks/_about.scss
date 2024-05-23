@@ -1,0 +1,63 @@
+.about{
+    display: flex;
+    position: relative;
+    padding-top: 180px;
+
+    &__image{
+        width: 100%;
+        height: 700px;
+        background-image: url(../img/about.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-right: 2.5rem solid $color-primary;
+    }
+    &__image-wrapper{
+        padding-top: 150px;
+    }
+    &__column{
+        flex: 1;
+    }
+    &__title{
+        font: 4rem $font-accent;
+        padding-bottom: 85px;
+        padding-left: 10%;
+        padding-right: 20%;
+    }
+    &__description{
+        font-size: 2rem;
+        padding-left: 10%;
+        padding-right: 30%;
+        padding-bottom: 170px;
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 160px;
+        background-image: url('../img/about_dec.svg');
+        background-repeat: no-repeat;
+    }
+}
+
+@include mediaTablet {
+    .about{
+        display: block;
+        &__image{
+            height: 50vh;
+        }
+        &__image-wrapper{
+            padding-top: 0px;
+        }
+        &__title{
+            padding-top: 20px;
+            padding-bottom: 30px;
+        }
+        &__description{
+            padding-bottom: 110px;
+        }
+        &::after{
+            height: 75px;
+        }
+    }
+  }
