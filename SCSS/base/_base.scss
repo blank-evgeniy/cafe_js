@@ -13,9 +13,14 @@ html {
 @include mediaTablet {
     html {
        font-size: 12px;
+       scroll-behavior:auto;
      }
   }
 
 body {
     min-width: 400px;
+}
+
+.no-scroll{
+  overflow-y: hidden;
 }

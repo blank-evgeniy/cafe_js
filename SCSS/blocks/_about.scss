@@ -43,6 +43,7 @@
 @include mediaTablet {
     .about{
         display: block;
+        padding-top: 80px;
         &__image{
             height: 50vh;
         }

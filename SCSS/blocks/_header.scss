@@ -10,15 +10,58 @@
     width: 100%;
     background-color: rgba(255, 255, 255);
     &__logo {
-        color:black;
-        font-size: 2.25rem;
-        text-transform: uppercase;
         margin-right: auto;
-        font-weight: 600;
-        border-top: solid 0.15rem black;
+    }
+    &__menu-btn{
+        display: none;
+    }
+    &__close-btn{
+        display: none;
+    }
+}
+
+.header_mobile{
+    position: fixed;
+    width: 100%;
+    height: 200vh;
+    padding: 50px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    .header__close-btn{
+        display: block;
+        position: fixed;
+        top: 50px;
+        right: 35px;
+    }
+    .header__menu-btn{
+        display: none;
+    }
+    .header__nav{
+        display: block;
+    }
+    .nav__list{
+        flex-direction: column;
+        padding-top: 30px;
+        row-gap: 50px;
     }
 }
 
 .header-top{
     height: 75px;
+}
+
+@include mediaTablet {
+    .header{
+        &__nav{
+            display: none;
+        }
+        &__menu-btn{
+            display: block;
+        }
+    }
+    .header-top{
+        display: none;
+    }
 }

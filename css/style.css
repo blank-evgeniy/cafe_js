@@ -12,10 +12,15 @@ html {
 @media screen and (max-width: 999px) {
   html {
     font-size: 12px;
+    scroll-behavior: auto;
   }
 }
 body {
   min-width: 400px;
+}
+
+.no-scroll {
+  overflow-y: hidden;
 }
 
 * {
@@ -46,25 +51,66 @@ body {
   background-color: rgb(255, 255, 255);
 }
 .header__logo {
-  color: black;
-  font-size: 2.25rem;
-  text-transform: uppercase;
   margin-right: auto;
-  font-weight: 600;
-  border-top: solid 0.15rem black;
+}
+.header__menu-btn {
+  display: none;
+}
+.header__close-btn {
+  display: none;
+}
+
+.header_mobile {
+  position: fixed;
+  width: 100%;
+  height: 200vh;
+  padding: 50px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.header_mobile .header__close-btn {
+  display: block;
+  position: fixed;
+  top: 50px;
+  right: 35px;
+}
+.header_mobile .header__menu-btn {
+  display: none;
+}
+.header_mobile .header__nav {
+  display: block;
+}
+.header_mobile .nav__list {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 30px;
+  row-gap: 50px;
 }
 
 .header-top {
   height: 75px;
 }
 
-.nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+@media screen and (max-width: 999px) {
+  .header__nav {
+    display: none;
+  }
+  .header__menu-btn {
+    display: block;
+  }
+  .header-top {
+    display: none;
+  }
 }
 .nav__list {
   display: -webkit-box;
@@ -176,6 +222,7 @@ body {
 @media screen and (max-width: 999px) {
   .about {
     display: block;
+    padding-top: 80px;
   }
   .about__image {
     height: 50vh;
@@ -298,13 +345,11 @@ body {
   }
   .recipe__title {
     padding-bottom: 50px;
+    padding-top: 70px;
   }
 }
 .recipe-item {
   max-width: 450px;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 450px;
-          flex: 1 450px;
   text-align: center;
 }
 .recipe-item__title {
