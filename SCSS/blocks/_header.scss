@@ -8,6 +8,7 @@
     padding: 0 5%;
     height: 75px;
     width: 100%;
+    box-shadow: 0 10px 9px -9px #000000;
     background-color: rgba(255, 255, 255);
     &__logo {
         margin-right: auto;
@@ -21,7 +22,6 @@
 }
 
 .header_mobile{
-    position: fixed;
     width: 100%;
     height: 200vh;
     padding: 50px;

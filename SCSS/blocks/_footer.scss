@@ -1,0 +1,36 @@
+.footer{
+    margin-top: 50px;
+    background-color: $color-primary;
+    padding: 20px;
+    color: white;
+    &__row{
+        display: flex;
+        column-gap: 150px;
+    }
+    &__section{
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+    &__section-name{
+        font-weight: 400;
+        font-size: 1.5rem;
+    }
+    &__section-info{
+        font-size: 1.5rem;
+    }
+    &__right{
+        text-align: center;
+        padding-top: 90px;
+    }
+}
+
+@include mediaTablet{
+    .footer{
+        &__row{
+            column-gap: 50px;
+            row-gap: 50px;
+            flex-wrap: wrap;
+        }
+    }
+}

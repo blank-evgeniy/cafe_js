@@ -21,6 +21,11 @@ body {
     min-width: 400px;
 }
 
+button {
+  border: 0;
+  background-color: transparent;
+}
+
 .no-scroll{
   overflow-y: hidden;
 }

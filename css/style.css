@@ -19,6 +19,11 @@ body {
   min-width: 400px;
 }
 
+button {
+  border: 0;
+  background-color: transparent;
+}
+
 .no-scroll {
   overflow-y: hidden;
 }
@@ -48,6 +53,8 @@ body {
   padding: 0 5%;
   height: 75px;
   width: 100%;
+  -webkit-box-shadow: 0 10px 9px -9px #000000;
+          box-shadow: 0 10px 9px -9px #000000;
   background-color: rgb(255, 255, 255);
 }
 .header__logo {
@@ -61,7 +68,6 @@ body {
 }
 
 .header_mobile {
-  position: fixed;
   width: 100%;
   height: 200vh;
   padding: 50px;
@@ -363,4 +369,51 @@ body {
 }
 .recipe-item__image {
   width: 100%;
+}
+
+.footer {
+  margin-top: 50px;
+  background-color: #2E2C2C;
+  padding: 20px;
+  color: white;
+}
+.footer__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 150px;
+     -moz-column-gap: 150px;
+          column-gap: 150px;
+}
+.footer__section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 10px;
+}
+.footer__section-name {
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+.footer__section-info {
+  font-size: 1.5rem;
+}
+.footer__right {
+  text-align: center;
+  padding-top: 90px;
+}
+
+@media screen and (max-width: 999px) {
+  .footer__row {
+    -webkit-column-gap: 50px;
+       -moz-column-gap: 50px;
+            column-gap: 50px;
+    row-gap: 50px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }

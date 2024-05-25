@@ -5,14 +5,15 @@ const nav_links = document.querySelectorAll(".nav__link")
 
 const header = document.querySelector(".header");
 
-menu_btn.onclick = function () {
+function menuOpen(){
     header.classList.add('header_mobile');
     document.body.classList.add('no-scroll');
 }
-close_btn.onclick = function () {
+function menuClose(){
     header.classList.remove('header_mobile');
     document.body.classList.remove('no-scroll');
 }
-nav_links.forEach( (link)=> link.onclick = function () {
-    header.classList.remove('header_mobile');
-})
+
+menu_btn.onclick = menuOpen;
+close_btn.onclick = menuClose;
+nav_links.forEach( (link)=> link.onclick = menuClose);
