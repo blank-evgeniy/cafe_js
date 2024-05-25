@@ -1,7 +1,7 @@
 .recipe{
-    background-image: url('../img/recipe_back.png');
+    /*background-image: url('../img/recipe_back.png');
     background-repeat: no-repeat;
-    background-position: bottom 50% right -1500px;
+    background-position: bottom 50% right -1500px;*/
 
     &__wrapper{
         max-width: 1030px;
@@ -11,7 +11,7 @@
     &__title{
         font: 4rem $font-accent;
         padding-top: 150px;
-        padding-bottom: 150px;
+        padding-bottom: 100px;
     }
     &__row{
         display: flex;
@@ -33,6 +33,9 @@
         &__title{
             padding-bottom: 50px;
             padding-top: 70px;
+        }
+        &__row{
+            row-gap: 50px;
         }
     }
   }

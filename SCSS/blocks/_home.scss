@@ -20,23 +20,18 @@
     }
     &__subtitle {
         font: 3rem $font-accent;
-        padding-bottom: 200px;
-    }
-    &__opening-hours{
-        display: flex;
-        justify-content: center;
-
-        font-size: 1.25rem;
-        padding: 25px 0;
-        
-        background-color: white;
+        padding-bottom: 300px;
     }
 }
 
-@include mediaTablet {
+@include mediaPhone {
     .home{
-        &__opening-hours{
-            font-size: 0.9rem;
+        &__title-container{
+            max-width:max-content;
+            margin-left: 0;
+        }
+        &__subtitle {
+            padding-bottom: 150px;
         }
     }
   }

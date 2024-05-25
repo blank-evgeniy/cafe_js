@@ -178,23 +178,18 @@ button {
 }
 .home__subtitle {
   font: 3rem "Italiana";
-  padding-bottom: 200px;
-}
-.home__opening-hours {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-size: 1.25rem;
-  padding: 25px 0;
-  background-color: white;
+  padding-bottom: 300px;
 }
 
-@media screen and (max-width: 999px) {
-  .home__opening-hours {
-    font-size: 0.9rem;
+@media screen and (max-width: 499px) {
+  .home__title-container {
+    max-width: -webkit-max-content;
+    max-width: -moz-max-content;
+    max-width: max-content;
+    margin-left: 0;
+  }
+  .home__subtitle {
+    padding-bottom: 150px;
   }
 }
 .about {
@@ -237,7 +232,7 @@ button {
 @media screen and (max-width: 999px) {
   .about {
     display: block;
-    padding-top: 80px;
+    padding-top: 50px;
   }
   .about__image {
     height: 50vh;
@@ -251,6 +246,7 @@ button {
     padding-left: 20px;
   }
   .about__description {
+    font-size: 1.5rem;
     padding-bottom: 110px;
     padding-left: 20px;
   }
@@ -333,9 +329,9 @@ button {
 }
 
 .recipe {
-  background-image: url("../img/recipe_back.png");
+  /*background-image: url('../img/recipe_back.png');
   background-repeat: no-repeat;
-  background-position: bottom 50% right -1500px;
+  background-position: bottom 50% right -1500px;*/
 }
 .recipe__wrapper {
   max-width: 1030px;
@@ -345,7 +341,7 @@ button {
 .recipe__title {
   font: 4rem "Italiana";
   padding-top: 150px;
-  padding-bottom: 150px;
+  padding-bottom: 100px;
 }
 .recipe__row {
   display: -webkit-box;
@@ -378,6 +374,9 @@ button {
     padding-bottom: 50px;
     padding-top: 70px;
   }
+  .recipe__row {
+    row-gap: 50px;
+  }
 }
 .recipe-item {
   max-width: 450px;
@@ -385,7 +384,7 @@ button {
 }
 .recipe-item__title {
   font-size: 2.25rem;
-  min-height: 72px;
+  min-height: 80px;
 }
 .recipe-item__description {
   font-size: 1rem;
@@ -396,6 +395,14 @@ button {
   width: 100%;
 }
 
+@media screen and (max-width: 999px) {
+  .recipe-item__title {
+    min-height: auto;
+  }
+  .recipe-item__description {
+    min-height: auto;
+  }
+}
 .footer {
   margin-top: 200px;
   padding: 20px;
@@ -433,6 +440,9 @@ button {
 }
 
 @media screen and (max-width: 999px) {
+  .footer {
+    margin-top: 100px;
+  }
   .footer__row {
     -webkit-column-gap: 50px;
        -moz-column-gap: 50px;
