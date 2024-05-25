@@ -50,7 +50,7 @@ button {
   top: 0;
   z-index: 10;
   overflow: hidden;
-  height: 75px;
+  height: 80px;
   width: 100%;
   padding: 0 80px;
   -webkit-box-shadow: 0 10px 9px -9px #000000;
@@ -123,8 +123,8 @@ button {
   }
   .header__logo {
     position: fixed;
-    top: 20px;
-    left: 20px;
+    top: 7px;
+    left: 7px;
   }
   .header-top {
     display: none;
@@ -223,13 +223,13 @@ button {
 .about__title {
   font: 4rem "Italiana";
   padding-bottom: 85px;
-  padding-left: 10%;
-  padding-right: 20%;
+  padding-left: 100px;
+  padding-right: 20px;
 }
 .about__description {
   font-size: 2rem;
-  max-width: 475px;
-  padding-left: 10%;
+  max-width: 600px;
+  padding-left: 100px;
   padding-right: 20px;
   padding-bottom: 170px;
 }
@@ -248,9 +248,11 @@ button {
   .about__title {
     padding-top: 20px;
     padding-bottom: 30px;
+    padding-left: 20px;
   }
   .about__description {
     padding-bottom: 110px;
+    padding-left: 20px;
   }
 }
 .cafe-menu {
@@ -395,7 +397,7 @@ button {
 }
 
 .footer {
-  margin-top: 50px;
+  margin-top: 200px;
   padding: 20px;
   color: white;
   background-color: #2E2C2C;
