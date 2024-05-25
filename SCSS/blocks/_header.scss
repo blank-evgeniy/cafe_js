@@ -5,11 +5,13 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    padding: 0 5%;
+    padding: 0 80px;
     height: 75px;
     width: 100%;
     box-shadow: 0 10px 9px -9px #000000;
     background-color: rgba(255, 255, 255);
+    transition: height 0.5s ease;
+    overflow: hidden;
     &__logo {
         margin-right: auto;
     }
@@ -22,18 +24,24 @@
 }
 
 .header_mobile{
+    position: fixed;
     width: 100%;
-    height: 200vh;
+    height: 100vh;
     padding: 50px;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
 
+    .header__logo {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+    }
     .header__close-btn{
         display: block;
         position: fixed;
-        top: 50px;
-        right: 35px;
+        top: 20px;
+        right: 30px;
     }
     .header__menu-btn{
         display: none;
@@ -43,7 +51,7 @@
     }
     .nav__list{
         flex-direction: column;
-        padding-top: 30px;
+        padding-top: 100px;
         row-gap: 50px;
     }
 }
@@ -54,6 +62,7 @@
 
 @include mediaTablet {
     .header{
+        padding: 0 20px;
         &__nav{
             display: none;
         }

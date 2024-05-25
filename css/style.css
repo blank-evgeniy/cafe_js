@@ -50,12 +50,15 @@ button {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  padding: 0 5%;
+  padding: 0 80px;
   height: 75px;
   width: 100%;
   -webkit-box-shadow: 0 10px 9px -9px #000000;
           box-shadow: 0 10px 9px -9px #000000;
   background-color: rgb(255, 255, 255);
+  -webkit-transition: height 0.5s ease;
+  transition: height 0.5s ease;
+  overflow: hidden;
 }
 .header__logo {
   margin-right: auto;
@@ -68,8 +71,9 @@ button {
 }
 
 .header_mobile {
+  position: fixed;
   width: 100%;
-  height: 200vh;
+  height: 100vh;
   padding: 50px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -82,11 +86,16 @@ button {
       -ms-flex-pack: start;
           justify-content: flex-start;
 }
+.header_mobile .header__logo {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+}
 .header_mobile .header__close-btn {
   display: block;
   position: fixed;
-  top: 50px;
-  right: 35px;
+  top: 20px;
+  right: 30px;
 }
 .header_mobile .header__menu-btn {
   display: none;
@@ -99,7 +108,7 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-top: 30px;
+  padding-top: 100px;
   row-gap: 50px;
 }
 
@@ -108,6 +117,9 @@ button {
 }
 
 @media screen and (max-width: 999px) {
+  .header {
+    padding: 0 20px;
+  }
   .header__nav {
     display: none;
   }
@@ -157,7 +169,7 @@ button {
   padding-left: 30px;
   padding-right: 5px;
   color: #ECE7E7;
-  background-color: rgba(176, 150, 150, 0.6);
+  background-color: rgba(176, 150, 150, 0.8);
 }
 .home__title {
   font: 5rem "Italiana";
@@ -212,17 +224,9 @@ button {
 .about__description {
   font-size: 2rem;
   padding-left: 10%;
-  padding-right: 30%;
+  padding-right: 20px;
   padding-bottom: 170px;
-}
-.about::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 160px;
-  background-image: url("../img/about_dec.svg");
-  background-repeat: no-repeat;
+  max-width: 475px;
 }
 
 @media screen and (max-width: 999px) {
@@ -243,9 +247,10 @@ button {
   .about__description {
     padding-bottom: 110px;
   }
-  .about::after {
-    height: 75px;
-  }
+}
+.cafe-menu {
+  position: relative;
+  padding-top: 30px;
 }
 .cafe-menu__title {
   display: -webkit-box;
@@ -279,6 +284,15 @@ button {
 .cafe-menu__column_first {
   border-right: 2px solid #C2C2C2;
 }
+.cafe-menu::before {
+  content: "";
+  position: absolute;
+  top: -130px;
+  width: 100%;
+  height: 160px;
+  background-image: url("../img/about_dec.svg");
+  background-repeat: no-repeat;
+}
 
 @media screen and (max-width: 999px) {
   .cafe-menu__row {
@@ -292,6 +306,10 @@ button {
   }
   .cafe-menu__column {
     border: none;
+  }
+  .cafe-menu::before {
+    height: 75px;
+    top: -45px;
   }
 }
 .menu-section__title {
