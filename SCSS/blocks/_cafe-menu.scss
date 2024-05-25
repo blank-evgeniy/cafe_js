@@ -1,12 +1,15 @@
 .cafe-menu {
     position: relative;
     padding-top: 30px;
+    
     &__title{
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 156px;
+
         font: 6rem 'Italiana';
+        height: 156px;
+        
         color: white;
         background-color: #D2C3C3;
     }
@@ -19,16 +22,19 @@
         max-width: 600px;
         padding-left: 50px;
         padding-right: 50px;
-        &_first{
+        
+        &_bordered{
             border-right: 2px solid #C2C2C2;
         }
     }
     &::before{
         content: '';
+
         position: absolute;
         top: -130px;
         width: 100%;
         height: 160px;
+
         background-image: url('../img/about_dec.svg');
         background-repeat: no-repeat;
     }
@@ -38,7 +44,7 @@
     .cafe-menu{
         &__row{
             flex-direction: column;
-            align-items: center;
+            align-items: flex-start;
         }
         &__column{
             border: none;

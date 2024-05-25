@@ -1,47 +1,50 @@
 .header {
-    position: sticky;
-    top: 0;
-    z-index: 10;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    padding: 0 80px;
+
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    overflow: hidden;
+    
     height: 75px;
     width: 100%;
+    padding: 0 80px;
+
     box-shadow: 0 10px 9px -9px #000000;
     background-color: rgba(255, 255, 255);
-    transition: height 0.5s ease;
-    overflow: hidden;
+
     &__logo {
         margin-right: auto;
     }
     &__menu-btn{
         display: none;
+        position: fixed;
+        top: 20px;
+        right: 20px;
     }
     &__close-btn{
         display: none;
+        position: fixed;
+        top: 20px;
+        right: 30px;
     }
 }
 
 .header_mobile{
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    padding: 50px;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
 
-    .header__logo {
-        position: fixed;
-        top: 20px;
-        left: 20px;
-    }
+    position: fixed;
+
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+
     .header__close-btn{
         display: block;
-        position: fixed;
-        top: 20px;
-        right: 30px;
     }
     .header__menu-btn{
         display: none;
@@ -51,8 +54,8 @@
     }
     .nav__list{
         flex-direction: column;
-        padding-top: 100px;
         row-gap: 50px;
+        padding-top: 100px;
     }
 }
 
@@ -68,6 +71,11 @@
         }
         &__menu-btn{
             display: block;
+        }
+        &__logo{
+            position: fixed;
+            top: 20px;
+            left: 20px;
         }
     }
     .header-top{

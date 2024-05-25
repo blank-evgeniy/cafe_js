@@ -11,7 +11,6 @@ html {
 
 @media screen and (max-width: 999px) {
   html {
-    font-size: 12px;
     scroll-behavior: auto;
   }
 }
@@ -38,9 +37,6 @@ button {
 }
 
 .header {
-  position: sticky;
-  top: 0;
-  z-index: 10;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -50,31 +46,34 @@ button {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  padding: 0 80px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  overflow: hidden;
   height: 75px;
   width: 100%;
+  padding: 0 80px;
   -webkit-box-shadow: 0 10px 9px -9px #000000;
           box-shadow: 0 10px 9px -9px #000000;
   background-color: rgb(255, 255, 255);
-  -webkit-transition: height 0.5s ease;
-  transition: height 0.5s ease;
-  overflow: hidden;
 }
 .header__logo {
   margin-right: auto;
 }
 .header__menu-btn {
   display: none;
+  position: fixed;
+  top: 20px;
+  right: 20px;
 }
 .header__close-btn {
   display: none;
+  position: fixed;
+  top: 20px;
+  right: 30px;
 }
 
 .header_mobile {
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-  padding: 50px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -85,17 +84,13 @@ button {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-}
-.header_mobile .header__logo {
   position: fixed;
-  top: 20px;
-  left: 20px;
+  width: 100%;
+  height: 100%;
+  padding: 50px;
 }
 .header_mobile .header__close-btn {
   display: block;
-  position: fixed;
-  top: 20px;
-  right: 30px;
 }
 .header_mobile .header__menu-btn {
   display: none;
@@ -108,8 +103,8 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-top: 100px;
   row-gap: 50px;
+  padding-top: 100px;
 }
 
 .header-top {
@@ -125,6 +120,11 @@ button {
   }
   .header__menu-btn {
     display: block;
+  }
+  .header__logo {
+    position: fixed;
+    top: 20px;
+    left: 20px;
   }
   .header-top {
     display: none;
@@ -181,7 +181,6 @@ button {
   padding-bottom: 200px;
 }
 .home__opening-hours {
-  padding: 25px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -189,9 +188,15 @@ button {
       -ms-flex-pack: center;
           justify-content: center;
   font-size: 1.25rem;
+  padding: 25px 0;
   background-color: white;
 }
 
+@media screen and (max-width: 999px) {
+  .home__opening-hours {
+    font-size: 0.9rem;
+  }
+}
 .about {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -202,10 +207,10 @@ button {
 .about__image {
   width: 100%;
   height: 700px;
+  border-right: 2.5rem solid #2E2C2C;
   background-image: url(../img/about.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  border-right: 2.5rem solid #2E2C2C;
 }
 .about__image-wrapper {
   padding-top: 150px;
@@ -223,10 +228,10 @@ button {
 }
 .about__description {
   font-size: 2rem;
+  max-width: 475px;
   padding-left: 10%;
   padding-right: 20px;
   padding-bottom: 170px;
-  max-width: 475px;
 }
 
 @media screen and (max-width: 999px) {
@@ -262,8 +267,8 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 156px;
   font: 6rem "Italiana";
+  height: 156px;
   color: white;
   background-color: #D2C3C3;
 }
@@ -281,7 +286,7 @@ button {
   padding-left: 50px;
   padding-right: 50px;
 }
-.cafe-menu__column_first {
+.cafe-menu__column_bordered {
   border-right: 2px solid #C2C2C2;
 }
 .cafe-menu::before {
@@ -300,9 +305,9 @@ button {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
   .cafe-menu__column {
     border: none;
@@ -331,9 +336,9 @@ button {
   background-position: bottom 50% right -1500px;
 }
 .recipe__wrapper {
-  padding: 0 15px;
   max-width: 1030px;
   margin: 0 auto;
+  padding: 0 15px;
 }
 .recipe__title {
   font: 4rem "Italiana";
@@ -378,11 +383,11 @@ button {
 }
 .recipe-item__title {
   font-size: 2.25rem;
-  height: 4.5rem;
+  min-height: 72px;
 }
 .recipe-item__description {
   font-size: 1rem;
-  height: 5.5rem;
+  min-height: 88px;
   padding: 20px 0;
 }
 .recipe-item__image {
@@ -391,9 +396,9 @@ button {
 
 .footer {
   margin-top: 50px;
-  background-color: #2E2C2C;
   padding: 20px;
   color: white;
+  background-color: #2E2C2C;
 }
 .footer__row {
   display: -webkit-box;

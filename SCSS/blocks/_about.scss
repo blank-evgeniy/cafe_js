@@ -6,10 +6,11 @@
     &__image{
         width: 100%;
         height: 700px;
+
+        border-right: 2.5rem solid $color-primary;
         background-image: url(../img/about.jpg);
         background-repeat: no-repeat;
         background-size: cover;
-        border-right: 2.5rem solid $color-primary;
     }
     &__image-wrapper{
         padding-top: 150px;
@@ -19,16 +20,18 @@
     }
     &__title{
         font: 4rem $font-accent;
+
         padding-bottom: 85px;
         padding-left: 10%;
         padding-right: 20%;
     }
     &__description{
         font-size: 2rem;
+
+        max-width: 475px;
         padding-left: 10%;
         padding-right: 20px;
         padding-bottom: 170px;
-        max-width: 475px;
     }
 }
 
@@ -36,6 +39,7 @@
     .about{
         display: block;
         padding-top: 80px;
+        
         &__image{
             height: 50vh;
         }

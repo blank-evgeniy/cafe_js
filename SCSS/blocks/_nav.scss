@@ -2,16 +2,20 @@
     &__list{
         display: flex;
         align-items: center;
+
         column-gap: 32px;
     }
     &__link{
         font-size: 1.75rem;
+
         transition: 0.3s color ease, 0.5s font-size ease;
         color: black;
+
         &:hover {
             font-size: 2rem;
             color: rgb(180, 180, 180);
         }
+        
         &:active{
             transition-duration: 0s;
             color: rgb(255, 181, 21);
