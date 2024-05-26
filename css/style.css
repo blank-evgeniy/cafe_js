@@ -184,7 +184,11 @@ button {
     max-width: max-content;
     margin-left: 0;
   }
+  .home__title {
+    font-size: 3rem;
+  }
   .home__subtitle {
+    font-size: 2rem;
     padding-bottom: 150px;
   }
 }
@@ -243,7 +247,7 @@ button {
   }
   .about__description {
     font-size: 1.5rem;
-    padding-bottom: 110px;
+    padding-bottom: 50px;
     padding-left: 20px;
   }
 }
@@ -277,8 +281,8 @@ button {
 }
 .cafe-menu__column {
   max-width: 600px;
-  padding-left: 50px;
-  padding-right: 50px;
+  min-width: 500px;
+  padding: 0 50px;
 }
 .cafe-menu__column_bordered {
   border-right: 2px solid #C2C2C2;
@@ -308,11 +312,17 @@ button {
   }
   .cafe-menu__column {
     width: 95%;
+    min-width: auto;
     border: none;
   }
   .cafe-menu::before {
     height: 75px;
     top: -25px;
+  }
+}
+@media screen and (max-width: 479px) {
+  .cafe-menu__column {
+    padding: 0 15px;
   }
 }
 .menu-section__title {
@@ -327,10 +337,14 @@ button {
 .menu-section__desription {
   color: #818181;
 }
+.menu-section__price {
+  float: right;
+  white-space: pre;
+}
 
 @media screen and (max-width: 479px) {
   .menu-section {
-    font-size: 12px;
+    font-size: 10px;
   }
   .menu-section__title {
     padding-bottom: 1em;
@@ -380,7 +394,7 @@ button {
   }
   .recipe__title {
     padding-bottom: 50px;
-    padding-top: 70px;
+    padding-top: 30px;
   }
   .recipe__row {
     row-gap: 50px;

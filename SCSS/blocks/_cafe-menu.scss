@@ -20,8 +20,8 @@
     }
     &__column{
         max-width: 600px;
-        padding-left: 50px;
-        padding-right: 50px;
+        min-width: 500px;
+        padding: 0 50px;
         
         &_bordered{
             border-right: 2px solid #C2C2C2;
@@ -49,6 +49,7 @@
         }
         &__column{
             width: 95%;
+            min-width: auto;
             border: none;
         }
         &::before{
@@ -57,3 +58,11 @@
         }
     }
   }
+
+@include mediaPhone{
+    .cafe-menu{
+        &__column{
+            padding: 0 15px;
+        }
+    }
+}

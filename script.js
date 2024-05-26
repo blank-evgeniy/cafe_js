@@ -19,7 +19,6 @@ nav_links.forEach( (link)=> link.onclick = menuClose);
 
 //the functionality of the slidebar
 
-
 const initSlider = () => {
     const sliderButtons = document.querySelectorAll(".gallary__btn");
     const imageList = document.querySelector(".slider__image-list");
@@ -44,4 +43,4 @@ const initSlider = () => {
     imageList.addEventListener("scroll", handleSliderButtons)
 }
 
-window.addEventListener("load", initSlider)
+window.addEventListener("load", initSlider);

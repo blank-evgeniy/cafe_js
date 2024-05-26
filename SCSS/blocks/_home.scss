@@ -30,7 +30,11 @@
             max-width:max-content;
             margin-left: 0;
         }
+        &__title {
+            font-size: 3rem;
+        }
         &__subtitle {
+            font-size: 2rem;
             padding-bottom: 150px;
         }
     }

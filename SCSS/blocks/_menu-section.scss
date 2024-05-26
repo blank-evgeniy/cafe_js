@@ -11,11 +11,15 @@
     &__desription{
         color: #818181;
     }
+    &__price{
+        float: right;
+        white-space: pre;
+    }
 }
 
 @include mediaPhone{
     .menu-section{
-        font-size: 12px;
+        font-size: 10px;
         &__title{
             padding-bottom: 1em;
         }
