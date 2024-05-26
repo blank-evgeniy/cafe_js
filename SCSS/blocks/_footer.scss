@@ -1,6 +1,6 @@
 .footer{
-    margin-top: 200px;
-    padding: 20px;
+    margin-top: 150px;
+    padding: 40px;
 
     color: white;
     background-color: $color-primary;
@@ -29,7 +29,7 @@
 
 @include mediaTablet{
     .footer{
-        margin-top: 100px;
+        margin-top: 50px;
         &__row{
             column-gap: 50px;
             row-gap: 50px;

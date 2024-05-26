@@ -1,0 +1,30 @@
+.slider{
+    max-width: 1280px;
+    width: 80%;
+
+    margin-left: 0 auto;
+
+    &__image-list{
+        display: flex;
+        column-gap: 20px;
+
+        overflow-x: auto;
+        font-size: 0;
+        
+        scrollbar-width: none;
+        &::-webkit-scrollbar{
+            display: none;
+        }
+    }
+    &__image{
+        height: 400px;
+        width: 300px;
+        object-fit: cover;
+    }
+}
+
+@include mediaTablet{
+    .slider{
+        width: 95%;
+    }
+}

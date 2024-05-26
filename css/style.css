@@ -9,7 +9,7 @@ html {
   scroll-behavior: smooth;
 }
 
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 1023px) {
   html {
     scroll-behavior: auto;
   }
@@ -111,7 +111,7 @@ button {
   height: 75px;
 }
 
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 1023px) {
   .header {
     padding: 0 20px;
   }
@@ -159,7 +159,7 @@ button {
 
 .home {
   background-image: url(../img/mainbackground.jpg);
-  background-color: #7E655D;
+  background-color: #D2C3C3;
   background-size: cover;
   background-position: center;
 }
@@ -181,7 +181,7 @@ button {
   padding-bottom: 300px;
 }
 
-@media screen and (max-width: 499px) {
+@media screen and (max-width: 479px) {
   .home__title-container {
     max-width: -webkit-max-content;
     max-width: -moz-max-content;
@@ -229,7 +229,7 @@ button {
   padding-bottom: 170px;
 }
 
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 1023px) {
   .about {
     display: block;
     padding-top: 50px;
@@ -252,8 +252,8 @@ button {
   }
 }
 .cafe-menu {
+  padding: 100px 0;
   position: relative;
-  padding-top: 30px;
 }
 .cafe-menu__title {
   display: -webkit-box;
@@ -290,48 +290,60 @@ button {
 .cafe-menu::before {
   content: "";
   position: absolute;
-  top: -130px;
+  top: -60px;
   width: 100%;
   height: 160px;
   background-image: url("../img/about_dec.svg");
   background-repeat: no-repeat;
 }
 
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 1023px) {
+  .cafe-menu {
+    padding: 50px 0;
+  }
   .cafe-menu__row {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .cafe-menu__column {
+    width: 95%;
     border: none;
   }
   .cafe-menu::before {
     height: 75px;
-    top: -45px;
+    top: -25px;
   }
 }
 .menu-section__title {
-  font-size: 2rem;
-  padding-bottom: 2rem;
-  padding-top: 0.5rem;
+  font-size: 2em;
+  padding-bottom: 1.2em;
+  padding-top: 0.5em;
 }
 .menu-section__item {
-  font-size: 1.25rem;
-  padding-bottom: 1rem;
+  font-size: 1.25em;
+  padding-bottom: 1em;
 }
 .menu-section__desription {
   color: #818181;
 }
 
+@media screen and (max-width: 479px) {
+  .menu-section {
+    font-size: 12px;
+  }
+  .menu-section__title {
+    padding-bottom: 1em;
+  }
+}
 .recipe {
-  /*background-image: url('../img/recipe_back.png');
-  background-repeat: no-repeat;
-  background-position: bottom 50% right -1500px;*/
+  padding: 110px 0;
+  background-color: #2E2C2C;
+  color: white;
 }
 .recipe__wrapper {
   max-width: 1030px;
@@ -340,7 +352,6 @@ button {
 }
 .recipe__title {
   font: 4rem "Italiana";
-  padding-top: 150px;
   padding-bottom: 100px;
 }
 .recipe__row {
@@ -357,9 +368,10 @@ button {
           flex: 1;
 }
 
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 1023px) {
   .recipe {
     background-image: none;
+    padding: 50px 0;
   }
   .recipe__row {
     -webkit-box-orient: vertical;
@@ -395,7 +407,7 @@ button {
   width: 100%;
 }
 
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 1023px) {
   .recipe-item__title {
     min-height: auto;
   }
@@ -403,9 +415,92 @@ button {
     min-height: auto;
   }
 }
+.gallary {
+  width: 95%;
+  padding: 150px 15px;
+  margin: 0 auto;
+}
+.gallary__title {
+  font: 4rem "Italiana";
+  padding-bottom: 100px;
+  text-align: center;
+}
+.gallary__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.gallary__btn {
+  height: 80px;
+  width: 80px;
+  -webkit-transition: scale 0.3s ease;
+  transition: scale 0.3s ease;
+}
+.gallary__btn:hover {
+  cursor: pointer;
+  scale: 1.5;
+}
+.gallary__btn_inactive:hover {
+  cursor: default;
+  scale: 1;
+}
+
+@media screen and (max-width: 1023px) {
+  .gallary {
+    padding: 50px 15px;
+  }
+  .gallary__title {
+    padding-bottom: 50px;
+  }
+  .gallary__btn {
+    display: none;
+  }
+  .gallary__container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+.slider {
+  max-width: 1280px;
+  width: 80%;
+  margin-left: 0 auto;
+}
+.slider__image-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
+  overflow-x: auto;
+  font-size: 0;
+  scrollbar-width: none;
+}
+.slider__image-list::-webkit-scrollbar {
+  display: none;
+}
+.slider__image {
+  height: 400px;
+  width: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media screen and (max-width: 1023px) {
+  .slider {
+    width: 95%;
+  }
+}
 .footer {
-  margin-top: 200px;
-  padding: 20px;
+  margin-top: 150px;
+  padding: 40px;
   color: white;
   background-color: #2E2C2C;
 }
@@ -439,9 +534,9 @@ button {
   padding-top: 90px;
 }
 
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 1023px) {
   .footer {
-    margin-top: 100px;
+    margin-top: 50px;
   }
   .footer__row {
     -webkit-column-gap: 50px;

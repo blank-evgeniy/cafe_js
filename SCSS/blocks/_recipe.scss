@@ -1,7 +1,8 @@
 .recipe{
-    /*background-image: url('../img/recipe_back.png');
-    background-repeat: no-repeat;
-    background-position: bottom 50% right -1500px;*/
+    padding: 110px 0;
+
+    background-color: $color-primary;
+    color: white;
 
     &__wrapper{
         max-width: 1030px;
@@ -9,8 +10,7 @@
         padding: 0 15px;
     }
     &__title{
-        font: 4rem $font-accent;
-        padding-top: 150px;
+        font: $subtitle;
         padding-bottom: 100px;
     }
     &__row{
@@ -26,6 +26,7 @@
 @include mediaTablet {
     .recipe{
         background-image: none;
+        padding: 50px 0;
         &__row{
             flex-direction: column;
             align-items: center;

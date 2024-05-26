@@ -1,6 +1,6 @@
 .cafe-menu {
+    padding: 100px 0;
     position: relative;
-    padding-top: 30px;
     
     &__title{
         display: flex;
@@ -11,7 +11,7 @@
         height: 156px;
         
         color: white;
-        background-color: #D2C3C3;
+        background-color: $color-secondary;
     }
     &__row {
         display: flex;
@@ -31,7 +31,7 @@
         content: '';
 
         position: absolute;
-        top: -130px;
+        top: -60px;
         width: 100%;
         height: 160px;
 
@@ -42,16 +42,18 @@
 
 @include mediaTablet {
     .cafe-menu{
+        padding: 50px 0;
         &__row{
             flex-direction: column;
-            align-items: flex-start;
+            align-items: center;
         }
         &__column{
+            width: 95%;
             border: none;
         }
         &::before{
             height: 75px;
-            top: -45px;
+            top: -25px;
         }
     }
   }

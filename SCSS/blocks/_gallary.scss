@@ -1,0 +1,47 @@
+.gallary{
+    width: 95%;
+
+    padding: 150px 15px;
+    margin: 0 auto;
+
+    &__title{
+        font: $subtitle;
+        padding-bottom: 100px;
+        text-align: center;
+    }
+    &__container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__btn{
+        height: 80px;
+        width: 80px;
+        transition: scale 0.3s ease;
+        &:hover{
+            cursor: pointer;
+            scale: 1.5;
+        }
+        &_inactive{
+            &:hover{
+                cursor:default;
+                scale: 1;
+            }
+        }
+    }
+}
+
+@include mediaTablet{
+    .gallary{
+        padding: 50px 15px;
+        &__title{
+            padding-bottom: 50px;
+        }
+        &__btn{
+            display: none;
+        }
+        &__container{
+            justify-content: center;
+        }
+    }
+}

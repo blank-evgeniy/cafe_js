@@ -1,12 +1,13 @@
 //colors
 $color-primary: #2E2C2C;
-$color-secondary: #7E655D;
+$color-secondary: #D2C3C3;
 //fonts
 $font-main: 'Julius Sans One';
 $font-accent: 'Italiana';
+$subtitle: 4rem $font-accent;
 //media
-$tablet: 999px;
-$phone: 499px;
+$tablet: 1023px;
+$phone: 479px;
 //mixins
 @mixin mediaTablet {
     @media screen and (max-width: $tablet){
