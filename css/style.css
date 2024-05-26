@@ -14,10 +14,6 @@ html {
     scroll-behavior: auto;
   }
 }
-body {
-  min-width: 400px;
-}
-
 button {
   border: 0;
   background-color: transparent;
@@ -453,7 +449,7 @@ button {
 
 @media screen and (max-width: 1023px) {
   .gallary {
-    padding: 50px 15px;
+    padding: 70px 15px;
   }
   .gallary__title {
     padding-bottom: 50px;
